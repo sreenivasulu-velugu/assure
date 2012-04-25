@@ -1,1 +1,101 @@
-div This is home page
+h1.dash_head your Dashboard
+h2.dash_head here is your profile information
+
+.dashboard_left
+	= image_tag 'profile_image.jpg', :class => 'fl shadow'
+
+	#profile_info.mbm
+		.fl.mlm
+			.score 850
+			h2 Dustin Yoder
+
+		.fl.mlm style="width:100px;"
+			.fl style="width: 40px; height: 60px;"
+			h3 +230
+			h3 -25
+
+		.fl.mlm style="width:150px;"
+			.fl style="width: 40px; height: 60px;"
+			h3 +/-10
+			h3 #13/12000
+
+		.clearfix
+
+	.component
+		= image_tag 'graph.png'
+
+.dashboard_right
+	ul
+		li
+			.pic
+				img src='http://dummyimage.com/50x50/4bbac7/fff&text=img'
+			.content
+				h4
+					| Work (
+					= link_to 'edit', '#'
+					| )
+				div I am Graphic Desinger
+				div at Park Agency in San Francisco, CA
+
+		li
+			.pic
+				img src='http://dummyimage.com/50x50/a7dcb8/fff&text=img'
+			.content
+				h4
+					| Birthday (
+					= link_to 'edit', '#'
+					| )
+				div January 28th, 1985
+				div making you 27 years old
+
+		li
+			.pic
+				img src='http://dummyimage.com/50x50/ee252d/fff&text=img'
+			.content
+				h4
+					| Relationship (
+					= link_to 'edit', '#'
+					| )
+				div You are married to Kendell Yoder
+				div
+					| Do you have any kids? (
+					= link_to 'add', '#'
+					| )
+
+		li
+			.pic
+				img src='http://dummyimage.com/50x50/ece745/fff&text=img'
+			.content
+				h4
+					| Living (
+					= link_to 'edit', '#'
+					| )
+				div 1624 Juanita Avenue
+				div San Jose, CA 95125
+				div
+					| (
+					= link_to 'do you own or rent?', '#'
+					| )
+
+		li
+			.pic
+				img src='http://dummyimage.com/50x50/3585bb/fff&text=img'
+			.content
+				h4
+					| Education (
+					= link_to 'edit', '#'
+					| )
+				div You are a graduate from stanford
+				div a BS Degree Management
+
+		li
+			.pic
+				img src='http://dummyimage.com/50x50/c6c6c6/fff&text=img'
+			.content
+				h4
+					| Cars (
+					= link_to 'edit', '#'
+					| )
+				div Do you own a car?
+
+.clearfix

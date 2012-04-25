@@ -1,0 +1,19 @@
+@import 'mixins';
+
+.dashboard_left {
+	@include fl;
+	#profile_info {
+		h3 {
+			margin:10px 0px;
+		}
+	}
+}
+.dashboard_right {
+	@include fl;
+	@include ml10;
+}
+h1.dash_head {
+}
+h2.dash_head {
+	margin-bottom: 30px;
+}

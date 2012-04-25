@@ -1,7 +1,14 @@
+@import 'mixins';
+
 body {
 	background: url('main_bg.jpg') #f4f4f4 repeat;
 	font-family: Verdana, Arial;
+//	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 	font-size: 13px;
+	margin: 0px;
+	padding: 0px;
+}
+ul, p, h1, h2, h3, h4, h5, h6 {
 	margin: 0px;
 	padding: 0px;
 }
@@ -16,4 +23,53 @@ header {
 .container {
 	width: 980px;
 	margin: auto;
+}
+
+h1 {
+	color: #d9d9d9;
+	font-size: 40px;
+}
+h2 {
+	color: $heading_gray;
+	letter-spacing: -0.5px;
+}
+h3 {
+	color: $black;
+}
+.score {
+	color: $yellow;
+	@include fb;
+	font-size: 80px;
+	line-height: 65px;
+	letter-spacing: -7px;
+}
+.shadow {
+	@include shadow;
+}
+.component {
+	@include component_border;
+	@include p10;
+}
+ul li {
+	@include clearfix;
+	list-style: none;
+	@include mb20;
+	.pic {
+		@include fl;
+		width: 50px;
+	}
+	.content {
+		margin-left:60px;
+		div {
+			font-size: 12px;
+		}
+	}
+}
+
+a {
+	color: $default_link;
+	@include tdn;
+	&:hover {
+		@include tdu;
+	}
 }
