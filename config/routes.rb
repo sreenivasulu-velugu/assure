@@ -55,5 +55,6 @@ Assure::Application.routes.draw do
   # match ':controller(/:action(/:id))(.:format)'
   
   root :to => 'home#index'
+  match 'welcome' => 'home#welcome'
 
 end

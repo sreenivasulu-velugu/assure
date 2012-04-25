@@ -1,0 +1,49 @@
+@import 'mixins';
+
+@mixin top_links_icon {
+	background-image: url('icons/top_icons.png');
+}
+@mixin top_links_icon_size {
+	margin: 9px 0px 0px 10px;
+	width: 15px;
+	height: 15px;
+}
+
+
+.top_links {
+	@include fr;
+	.icon {
+		@include dib;
+		@include top_links_icon;
+		margin-left: 5px;
+		cursor: pointer;
+		background-position: -8px -1px;
+		width: 33px;
+		height: 33px;
+		.remake {
+			@include top_links_icon;
+			@include top_links_icon_size;
+			background-position: -53px -11px;
+		}
+
+		.close {
+			@include top_links_icon;
+			@include top_links_icon_size;
+			background-position: -90px -10px;
+		}
+
+		.plus {
+			@include top_links_icon;
+			@include top_links_icon_size;
+			background-position: -124px -10px;
+		}
+
+		.settings {
+			@include top_links_icon;
+			@include top_links_icon_size;
+			width: 20px;
+			height: 20px;
+			background-position: -155px -8px;
+		}
+	}
+}
