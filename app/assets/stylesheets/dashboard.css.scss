@@ -3,8 +3,10 @@
 .dashboard_left {
 	@include fl;
 	#profile_info {
+		@include relative;
 		h3 {
 			margin:10px 0px;
+			line-height: 24px;
 		}
 	}
 }
@@ -16,4 +18,9 @@ h1.dash_head {
 }
 h2.dash_head {
 	margin-bottom: 30px;
+}
+.social_links {
+	@include absolute;
+	right: 0px;
+	bottom: 0px;
 }

@@ -182,6 +182,9 @@ $default_link: #389ad5;
 	border: 1px solid #DDD;
 	margin-bottom: 10px;
 }
+@mixin cp {
+	cursor: pointer;
+}
 @mixin relative {
 	position: relative;
 }

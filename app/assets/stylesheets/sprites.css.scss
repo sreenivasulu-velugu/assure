@@ -1,50 +1,251 @@
 @import 'mixins';
 
 @mixin top_links_icon {
-	background-image: url('icons/top_icons.png');
+	background-image: url('icons/top_icon.png');
+}
+
+@mixin icon {
+	background-image: url('icons/surify_sprite.png');
 }
 @mixin top_links_icon_size {
 	margin: 9px 0px 0px 10px;
 	width: 15px;
 	height: 15px;
+	@include cp;
 }
+@mixin icon_size_bubble {
+	width: 45px;
+	height: 47px;
+}
+@mixin icon_size_top_links {
+	width: 32px;
+	height: 31px;
+	@include cp;
+}
+@mixin icon_size_social {
+	width: 23px;
+	height: 23px;
+	@include cp;
+}
+@mixin icon_size_statistics {
+	width: 24px;
+	height: 24px;
+}
+@mixin work_bubble_hover {
+	background-position: 0px 0px;
+}
+@mixin birthday_bubble_hover {
+	background-position: -46px 0px;
+}
+@mixin relationship_bubble_hover {
+	background-position: -92px 0px;
+}
+@mixin car_bubble_hover {
+	background-position: -137px 0px;
+}
+@mixin home_bubble_hover {
+	background-position: -183px 0px;
+}
+@mixin education_bubble_hover {
+	background-position: -229px 0px;
+}
+//.top_links {
+//	@include fr;
+//	.icon {
+//		@include dib;
+//		@include top_links_icon;
+//		margin-left: 5px;
+//		cursor: pointer;
+//		background-position: -8px -1px;
+//		width: 33px;
+//		height: 33px;
+//		.remake {
+//			@include top_links_icon;
+//			@include top_links_icon_size;
+//			background-position: -53px -11px;
+//		}
 
+//		.close {
+//			@include top_links_icon;
+//			@include top_links_icon_size;
+//			background-position: -90px -10px;
+//		}
+
+//		.plus {
+//			@include top_links_icon;
+//			@include top_links_icon_size;
+//			background-position: -124px -10px;
+//		}
+
+//		.settings {
+//			@include top_links_icon;
+//			@include top_links_icon_size;
+//			width: 22px;
+//			height: 22px;
+//			margin: 6px 0px 0px 6px;
+//			background-position: -155px -8px;
+//		}
+//	}
+//}
 
 .top_links {
 	@include fr;
-	.icon {
-		@include dib;
-		@include top_links_icon;
-		margin-left: 5px;
-		cursor: pointer;
-		background-position: -8px -1px;
-		width: 33px;
-		height: 33px;
-		.remake {
-			@include top_links_icon;
-			@include top_links_icon_size;
-			background-position: -53px -11px;
-		}
+}
 
-		.close {
-			@include top_links_icon;
-			@include top_links_icon_size;
-			background-position: -90px -10px;
-		}
+.icon {
 
-		.plus {
-			@include top_links_icon;
-			@include top_links_icon_size;
-			background-position: -124px -10px;
+	// bubble icon
+	.work {
+		@include icon;
+		@include icon_size_bubble;
+		background-position: 0px -49px;
+		&:hover {
+			@include work_bubble_hover;
 		}
+	}
+	.birthday {
+		@include icon;
+		@include icon_size_bubble;
+		background-position: -46px -48px;
+		&:hover {
+			@include birthday_bubble_hover;
+		}
+	}
+	.relationship {
+		@include icon;
+		@include icon_size_bubble;
+		background-position: -92px -48px;
+		&:hover {
+			@include relationship_bubble_hover;
+		}
+	}
+	.car {
+		@include icon;
+		@include icon_size_bubble;
+		background-position: -137px -48px;
+		&:hover {
+			@include car_bubble_hover;
+		}
+	}
+	.home {
+		@include icon;
+		@include icon_size_bubble;
+		background-position: -183px -48px;
+		&:hover {
+			@include home_bubble_hover;
+		}
+	}
+	.education {
+		@include icon;
+		@include icon_size_bubble;
+		background-position: -229px -48px;
+		&:hover {
+			@include education_bubble_hover;
+		}
+	}
 
-		.settings {
-			@include top_links_icon;
-			@include top_links_icon_size;
-			width: 22px;
-			height: 22px;
-			margin: 6px 0px 0px 6px;
-			background-position: -155px -8px;
+	// top_links icon
+	.update
+	{
+		@include icon;
+		@include icon_size_top_links;
+		background-position: 0px -96px;
+	}
+	.cancel
+	{
+		@include icon;
+		@include icon_size_top_links;
+		background-position: 0px -128px;
+	}
+	.add
+	{
+		@include icon;
+		@include icon_size_top_links;
+		background-position: 0px -160px;
+	}
+	.settings
+	{
+		@include icon;
+		@include icon_size_top_links;
+		background-position: 0px -192px;
+	}
+
+	// social icons
+
+	.facebook {
+		@include icon;
+		@include icon_size_social;
+		background-position: -32px -136px;
+		&:hover {
+			background-position: -32px -112px;
+		}
+	}
+	.linked_in {
+		@include icon;
+		@include icon_size_social;
+		background-position: -56px -136px;
+		&:hover {
+			background-position: -56px -112px;
+		}
+	}
+
+	//statistics
+
+	.pie {
+		@include icon;
+		@include icon_size_statistics;
+		background-position: -79px -112px;
+	}
+	.bar {
+		@include icon;
+		@include icon_size_statistics;
+		background-position: -103px -112px;
+	}
+	.line {
+		@include icon;
+		@include icon_size_statistics;
+		background-position: -128px -112px;
+	}
+	.arrow {
+		@include icon;
+		@include icon_size_statistics;
+		background-position: -153px -112px;
+	}
+	.line_red {
+		@include icon;
+		@include icon_size_statistics;
+		background-position: -128px -136px;
+	}
+	.arrow_red {
+		@include icon;
+		@include icon_size_statistics;
+		background-position: -153px -136px;
+	}
+
+	// STATISTICS 24x24pie (79,112)bar (103,112)line (128,112)arrow (153,112)line red (128,136)arrow red (153,136)
+}
+
+li {
+	&:hover {
+		.icon {
+			.work {
+				@include work_bubble_hover;
+			}
+			.birthday {
+				@include birthday_bubble_hover;
+			}
+			.relationship {
+				@include relationship_bubble_hover;
+			}
+			.car {
+				@include car_bubble_hover;
+			}
+			.home {
+				@include home_bubble_hover;
+			}
+			.education {
+				@include education_bubble_hover;
+			}
 		}
 	}
 }
