@@ -1,4 +1,4 @@
-source 'https://rubygems.org'
+source 'http://rubygems.org'
 gem 'rails', '3.2.2'
 
 gem "devise", ">= 2.1.0.rc"
