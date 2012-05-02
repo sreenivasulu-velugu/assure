@@ -15,4 +15,9 @@ class User < ActiveRecord::Base
   def password_required?
   	(authentications.empty? || !password.blank?) && super
   end
+
+  def pull_large_fb_pic image_url
+    image_url.split('?').[0]+'?type=large'
+  end
+
 end

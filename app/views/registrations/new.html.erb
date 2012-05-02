@@ -7,7 +7,7 @@
 		<%= beautify_params f.label(:first_name), f.text_field(:first_name, :value => session['omniauth'][:info][:first_name]) %>
 		<%= beautify_params f.label(:last_name), f.text_field(:last_name, :value => session['omniauth'][:info][:last_name]) %>
 		<%= beautify_params f.label(:email), f.email_field(:email, :value => session['omniauth'][:info][:email]) %>
-		<%= f.hidden_field :image, :value => session['omniauth'][:info][:image] %>
+		<%= f.hidden_field :image, :value => pull_large_fb_pic(session['omniauth'][:info][:image]) %>
 	<% else %>
 		<%= beautify_params f.label(:first_name), f.text_field(:first_name) %>
 		<%= beautify_params f.label(:last_name), f.text_field(:last_name) %>
