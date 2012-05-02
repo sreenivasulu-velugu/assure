@@ -41,5 +41,9 @@ module ApplicationHelper
 		
 		content_tag 'label', input + span + clearfix, :for => id, :class => "radio_label #{toggle_type}", :style => "width: #{width}px;", :id => label_id
 	end
+	
+	def pull_large_fb_pic image_url
+    image_url.split('?')[0]+'?type=large'
+  end
 
 end
