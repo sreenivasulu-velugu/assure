@@ -19,6 +19,13 @@ h1.dash_head {
 h2.dash_head {
 	margin-bottom: 30px;
 }
+.score {
+	color: $yellow;
+	@include fb;
+	font-size: 80px;
+	line-height: 65px;
+	letter-spacing: -7px;
+}
 .social_links {
 	@include absolute;
 	right: 0px;

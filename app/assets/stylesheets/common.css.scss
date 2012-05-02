@@ -21,10 +21,25 @@ header {
 	padding: 10px;
 }
 .container {
-	width: 980px;
+	@include content_width;
 	margin: auto;
 }
-
+.error, .alert {
+	@include ma;
+	@include p5;
+	@include content_width;
+	@include rad5;
+	@include shadow;
+	@include error;
+}
+.success, .notice {
+	@include ma;
+	@include content_width;
+	@include p5;
+	@include rad5;
+	@include shadow;
+	@include success;
+}
 h1 {
 	color: #d9d9d9;
 	font-size: 40px;
@@ -35,13 +50,6 @@ h2 {
 }
 h3 {
 	color: $black;
-}
-.score {
-	color: $yellow;
-	@include fb;
-	font-size: 80px;
-	line-height: 65px;
-	letter-spacing: -7px;
 }
 .shadow {
 	@include shadow;
@@ -69,7 +77,16 @@ ul li {
 a {
 	color: $default_link;
 	@include tdn;
+	@include mr5;
 	&:hover {
 		@include tdu;
 	}
+}
+.beautify_params {
+	margin: 5px 0px;
+	@include clearfix;
+}
+
+.login_links {
+	@include login_links_height;
 }

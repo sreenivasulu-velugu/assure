@@ -75,6 +75,9 @@ $default_link: #389ad5;
 @mixin no_border {
 	border:none;
 }
+@mixin ma {
+	margin: auto;
+}
 @mixin m5 {
 	margin: 5px;
 }
@@ -206,4 +209,23 @@ $default_link: #389ad5;
 @mixin component_border {
 	border: 1px solid $border_color;
 	@include rad5;
+}
+
+@mixin content_width {
+	width: 980px;
+}
+
+@mixin success {
+	background:#1ab00a;
+	// border:1px solid #127408;
+}
+
+@mixin error {
+	background-color:#ffa9a9;
+	// border:1px solid #ff6e6e;
+}
+
+@mixin login_links_height {
+	height:32px;
+	line-height:32px;
 }

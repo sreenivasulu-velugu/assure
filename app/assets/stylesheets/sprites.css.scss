@@ -249,3 +249,11 @@ li {
 		}
 	}
 }
+
+.fb_icon {
+	background: url('icons/facebook_32.png') no-repeat;
+	@include mr10;
+	width:auto;
+	@include login_links_height;
+	padding-left: 37px
+}

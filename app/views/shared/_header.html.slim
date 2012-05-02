@@ -1,12 +1,23 @@
 header
 	.container
-		.top_links
-			.icon.fl
-				.update
-			.icon.fl
-				.cancel
-			.icon.fl
-				.add
-			.icon.fl
-				.settings
+		- if user_signed_in?
+			.top_links
+				.icon.fl
+					.update
+				.icon.fl
+					.cancel
+				.icon.fl
+					.add
+				.icon.fl
+					.settings
+				.fr
+					= link_to 'Sign Out', destroy_user_session_path, :style => 'line-height: 30px; margin-left: 10px;'
+			.clearfix
+
+		- else
+			.login_links
+				= link_to 'Sign In', new_user_session_path, :class => 'mrl fl db'
+				= link_to 'Register', new_user_registration_path, :class => 'mrl fl db'
+				= link_to raw("<div class='fb_icon fl'>Login with facebook</div>"), '/auth/facebook?display=popup', :class => 'mrl db'
+				.clearfix
 		.clearfix

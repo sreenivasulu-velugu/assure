@@ -1,4 +1,20 @@
 Assure::Application.routes.draw do
+
+  match '/auth/:provider/callback' => 'authentications#create'
+  
+  authenticated :user do
+    root :to => 'home#index'
+  end
+
+  devise_for :users, :controllers => { :registrations => 'registrations' } do
+    get '/users/sign_out' => 'devise/sessions#destroy'
+  end
+
+  root :to => 'home#index'
+  match 'welcome' => 'home#welcome' # just for testing layout
+
+  resources :authentications
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -54,7 +70,4 @@ Assure::Application.routes.draw do
   # Note: This route will make all actions in every controller accessible via GET requests.
   # match ':controller(/:action(/:id))(.:format)'
   
-  root :to => 'home#index'
-  match 'welcome' => 'home#welcome' # just for testing layout
-
 end

@@ -15,5 +15,7 @@ html
 	body
 		#wrapper
 			= render :partial => 'shared/header'
+			= render :partial => 'shared/notice'
 			.container
-				= yield
+				.mtl
+					= yield

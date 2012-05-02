@@ -2,12 +2,12 @@ h1.dash_head your Dashboard
 h2.dash_head here is your profile information
 
 .dashboard_left
-	= image_tag 'profile_image.jpg', :class => 'fl shadow'
+	.fl= user_image current_user
 
 	#profile_info.mbm
 		.fl.mlm
 			.score 850
-			h2 Dustin Yoder
+			h2.mts #{current_user.first_name + " " + current_user.last_name}
 
 		.fl.mlm style="width:100px;"
 			h3
@@ -21,7 +21,7 @@ h2.dash_head here is your profile information
 				.fl.mls -25
 				.clearfix
 
-		.fl.mlm style="width:150px;"
+		.fl.mlm style="width:130px;"
 			h3
 				.icon.fl
 					.pie
