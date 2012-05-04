@@ -49,12 +49,6 @@ group :test do
   gem "launchy", ">= 2.0.5"
 
 end
-
-
-
-    gem 'libnotify', :group => :development
-    gem 'rb-inotify', :group => :development
-
-
-
+gem 'libnotify', :group => :development
+gem 'rb-inotify', :group => :development
 gem "mocha", :group => :test
