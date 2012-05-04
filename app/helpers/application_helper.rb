@@ -43,7 +43,16 @@ module ApplicationHelper
 	end
 	
 	def pull_large_fb_pic image_url
-    image_url.split('?')[0]+'?type=large'
-  end
+		image_url.split('?')[0]+'?type=large'
+	end
 
+	def fb_profile
+		return 'http://facebook.com/profile.php?id=' + current_user.authentications.find_by_provider('facebook').uid
+	end
+
+	def full_name user
+		if user
+			user.first_name + " " + user.last_name
+		end
+	end
 end

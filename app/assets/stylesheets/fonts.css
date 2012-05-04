@@ -1,0 +1,37 @@
+@charset "utf-8";
+
+@font-face {
+	font-family: 'Century Gothic Regular';
+	src: url('Century+Gothic+Regular.eot'); /* IE9 Compat Modes */
+	src: url('Century+Gothic+Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+			 url('Century+Gothic+Regular.woff') format('woff'), /* Modern Browsers */
+			 url('Century+Gothic+Regular.ttf')  format('truetype'), /* Safari, Android, iOS */
+			 url('Century+Gothic+Regular.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
+	font-family: 'Century Gothic Bold';
+	src: url('Century+Gothic+Bold.eot'); /* IE9 Compat Modes */
+	src: url('Century+Gothic+Bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+			 url('Century+Gothic+Bold.woff') format('woff'), /* Modern Browsers */
+			 url('Century+Gothic+Bold.ttf')  format('truetype'), /* Safari, Android, iOS */
+			 url('Century+Gothic+Bold.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
+	font-family: 'Century Gothic Italic';
+	src: url('Century+Gothic+Italic.eot'); /* IE9 Compat Modes */
+	src: url('Century+Gothic+Italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+			 url('Century+Gothic+Italic.woff') format('woff'), /* Modern Browsers */
+			 url('Century+Gothic+Italic.ttf')  format('truetype'), /* Safari, Android, iOS */
+			 url('Century+Gothic+Italic.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
+	font-family: 'Century Gothic Bold Italic';
+	src: url('Century+Gothic+Bold+Italic.eot'); /* IE9 Compat Modes */
+	src: url('Century+Gothic+Bold+Italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+			 url('Century+Gothic+Bold+Italic.woff') format('woff'), /* Modern Browsers */
+			 url('Century+Gothic+Bold+Italic.ttf')  format('truetype'), /* Safari, Android, iOS */
+			 url('Century+Gothic+Bold+Italic.svg#svgFontName') format('svg'); /* Legacy iOS */
+}

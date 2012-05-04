@@ -1,4 +1,27 @@
 ---
+<<<<<<< HEAD
+=======
+Century+Gothic+Bold+Italic.eot: Century+Gothic+Bold+Italic-a93ab23946e2a8987962ca654a7bf888.eot
+Century+Gothic+Bold+Italic.otf: Century+Gothic+Bold+Italic-6acc022b35d3c8b165be8cd647744d3b.otf
+Century+Gothic+Bold+Italic.svg: Century+Gothic+Bold+Italic-e685d2cde0ee0ae34a8db002f8f92e13.svg
+Century+Gothic+Bold+Italic.ttf: Century+Gothic+Bold+Italic-6004357a759505893c867345cfd2e40a.ttf
+Century+Gothic+Bold+Italic.woff: Century+Gothic+Bold+Italic-be68cb9678bf6f6a3dc4305d1d63c147.woff
+Century+Gothic+Bold.eot: Century+Gothic+Bold-516c4677a5e75b143fe47aafc6472dc2.eot
+Century+Gothic+Bold.otf: Century+Gothic+Bold-bf55306766a24617049a3015d82df5ca.otf
+Century+Gothic+Bold.svg: Century+Gothic+Bold-9a2eede2b2ac3fd2f90076e4ce187041.svg
+Century+Gothic+Bold.ttf: Century+Gothic+Bold-b954e5aaed59888aadae66ef5717f5bc.ttf
+Century+Gothic+Bold.woff: Century+Gothic+Bold-2386d4e4c9aa6a44bb4a1d698e93f068.woff
+Century+Gothic+Italic.eot: Century+Gothic+Italic-87fb513a026456c017bdfad7617e7d8e.eot
+Century+Gothic+Italic.otf: Century+Gothic+Italic-771dd6eb4afc5ebe7cc89f91efbe7973.otf
+Century+Gothic+Italic.svg: Century+Gothic+Italic-71ffead5878ba1ecd1b6b73e2d385b67.svg
+Century+Gothic+Italic.ttf: Century+Gothic+Italic-1d9a58ebbf1cb9d83d3d88b3fe684aed.ttf
+Century+Gothic+Italic.woff: Century+Gothic+Italic-ae786075b3848eed68a4319ac220d8b3.woff
+Century+Gothic+Regular.eot: Century+Gothic+Regular-00baf711f11b319951bd1d56339d6205.eot
+Century+Gothic+Regular.otf: Century+Gothic+Regular-5bd1e47f82dc383a409ba695e4540449.otf
+Century+Gothic+Regular.svg: Century+Gothic+Regular-e6e0099b620a401e2fd3593dfcb3d4c6.svg
+Century+Gothic+Regular.ttf: Century+Gothic+Regular-02868664b74aa9677cbb0116a0718817.ttf
+Century+Gothic+Regular.woff: Century+Gothic+Regular-50bf59021e89b5c15d2dab1e1d9ff042.woff
+>>>>>>> f44ffcec8b301ec69456ed2dc390f242b9380f82
 graph.png: graph-3073d12cff4e8afe5241a799b99c2584.png
 icons/facebook_32.png: icons/facebook_32-32c896e072499dd9ca6850f4133645d4.png
 icons/surify_sprite.png: icons/surify_sprite-71e3562742659c48ec1a103c77c15065.png
@@ -7,7 +30,11 @@ main_bg.jpg: main_bg-c097855c8a1d65505e815ea15f8205e5.jpg
 profile_image.jpg: profile_image-259e17a1329a6434a50d946163b6e860.jpg
 test.jpg: test-c3575422d97f04e137f40dc8c780d396.jpg
 application.js: application-a5c903e59f01662ca463d41a581b0658.js
+<<<<<<< HEAD
 application.css: application-0b3c8ec57e8bebf0b54a6dd2746f2eea.css
+=======
+application.css: application-f8898835e675370a3ee666be5a3f50d8.css
+>>>>>>> f44ffcec8b301ec69456ed2dc390f242b9380f82
 jquery-ui/ui-bg_flat_0_aaaaaa_40x100.png: jquery-ui/ui-bg_flat_0_aaaaaa_40x100-951e2a65945b93d3f69c1994e5672f39.png
 jquery-ui/ui-bg_flat_75_ffffff_40x100.png: jquery-ui/ui-bg_flat_75_ffffff_40x100-bb1c0ecbf7eea108034b2ff2a207ed02.png
 jquery-ui/ui-bg_glass_55_fbf9ee_1x400.png: jquery-ui/ui-bg_glass_55_fbf9ee_1x400-4bef92c30cceebf9563f80b7e5f5f52d.png

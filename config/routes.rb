@@ -7,11 +7,12 @@ Assure::Application.routes.draw do
   end
 
   devise_for :users, :controllers => { :registrations => 'registrations' } do
-    get '/users/sign_out' => 'devise/sessions#destroy'
+    get '/users/sign_out' => 'devise/sessions#destroy' # added this becaause of sign_out bug.
   end
 
   root :to => 'home#index'
   match 'welcome' => 'home#welcome' # just for testing layout
+  match 'test' => 'test#index' # just for testing layout
 
   resources :authentications
 
