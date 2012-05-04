@@ -15,7 +15,9 @@ Assure::Application.configure do
   config.assets.compress = true
 
   # Don't fallback to assets pipeline if a precompiled asset is missed
-  config.assets.compile = true
+  config.assets.compile = false
+
+  config.assets.initialize_on_precompile = false # added because of "-----> Preparing app for Rails asset pipeline Running: rake assets:precompile; rake aborted!; could not connect to server: Connection refused; Is the server running on host "127.0.0.1" and accepting"
 
   # Generate digests for assets URLs
   config.assets.digest = true
