@@ -12,6 +12,7 @@ Assure::Application.routes.draw do
 
   root :to => 'home#index'
   match 'welcome' => 'home#welcome' # just for testing layout
+  match 'test' => 'test#index' # just for testing layout
 
   resources :authentications
 
