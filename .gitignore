@@ -13,3 +13,6 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
+
+# Ignore the environment file. (as the facebook key environment varialbles are different for local and development)
+/config/environment.rb
