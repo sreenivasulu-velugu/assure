@@ -15,4 +15,4 @@
 /tmp
 
 # Ignore the omniauth file. (as the facebook key environment varialbles are different for local and development)
-config/initializers/omniauth.rb
+# config/initializers/omniauth.rb
