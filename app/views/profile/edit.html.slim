@@ -1,0 +1,18 @@
+h1 class="pbl" Profile Info
+div style="width:500px;"
+	= semantic_form_for @profile, :action => :update do |f|
+		
+		= f.semantic_fields_for @user do |user|
+			= user.input :first_name
+			= user.input :last_name
+			= user.input :username
+
+		= f.input :birthday, :as => :date, :prompt => { :day => 'Day', :month => 'Month', :year => 'Year' }, :start_year => 1900, :end_year => 2012, :label => 'Date of Birth', :input_html => { :class => 'date_select' }
+		= f.input :relationship_status, :as => :select, :collection => ['single', 'committed', 'married', 'complicated'], :prompt => 'Select Relationship'
+		= f.input :address
+		= f.input :work, :as => :string
+		= f.input :work_place
+		= f.input :education, :as => :string
+		= f.input :university
+
+		= f.submit 'Save Changes'

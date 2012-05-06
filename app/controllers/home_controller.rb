@@ -4,6 +4,9 @@ class HomeController < ApplicationController
 
 	def index
 		@user = current_user
+		if @user.profile.birthday.presence
+			@birthday = @user.profile.birthday.strftime("%B %e, %Y")
+		end
 	end
 
 	def welcome

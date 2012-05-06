@@ -1,4 +1,8 @@
 class User < ActiveRecord::Base
+  after_create :set_default_associations
+
+  # validations
+  validates :first_name, :last_name, :presence => true
 
 	# relations
   has_many :authentications
@@ -10,7 +14,7 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   # Setup accessible (or protected) attributes for your model
-  attr_accessible :email, :password, :password_confirmation, :remember_me, :first_name, :last_name, :image
+  attr_accessible :email, :password, :password_confirmation, :remember_me, :first_name, :last_name, :image, :username
 
   def apply_omniauth omniauth
   	authentications.build(:provider => omniauth['provider'], :uid => omniauth['uid'])
@@ -20,4 +24,8 @@ class User < ActiveRecord::Base
   	(authentications.empty? || !password.blank?) && super
   end
 
+  def set_default_associations
+    self.create_profile
+  end
+  
 end

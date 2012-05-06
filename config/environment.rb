@@ -9,5 +9,6 @@ ENV['FACEBOOK_SECRET_LOCAL'] = '0729498050c860339acb88539af074b4'
 
 ENV['FACEBOOK_KEY_HEROKU_DEV'] = '372280692807760'
 ENV['FACEBOOK_SECRET_HEROKU_DEV'] = 'ebd7344c6a20bb059691a8db7d82e436'
+
 # Initialize the rails aspplication
 Assure::Application.initialize!

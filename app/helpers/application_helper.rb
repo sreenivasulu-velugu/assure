@@ -55,4 +55,18 @@ module ApplicationHelper
 			user.first_name + " " + user.last_name
 		end
 	end
+
+	def in_place object, field, opts = {}
+		if field.presence
+			content_mid = content_tag 'span', field, :class => 'in_place_edit', :id => opts[:id]
+		else
+			content_mid = content_tag 'span', opts[:default], :class => 'in_place_edit', :id => opts[:id]
+		end
+
+		content_before = content_tag 'span', opts[:before] if opts[:before].presence
+		content_after = content_tag 'span', opts[:after] if opts[:after].presence
+
+		return content_before.presence ? (content_before + content_mid + content_after) : (content_mid + content_after)
+	end
+
 end

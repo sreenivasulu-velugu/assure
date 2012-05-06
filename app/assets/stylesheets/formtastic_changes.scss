@@ -1,0 +1,21 @@
+@import 'mixins';
+
+.formtastic {
+	.stringish input, .text textarea, textarea, select {
+		@include p5;
+	}
+	.stringish input, input[type='text'], input[type='password'], select {
+	}
+	select {
+		width: 360px;
+	}
+	textarea, .text textarea {
+		height: 100px;
+	}
+	abbr {
+		@include pl5;
+	}
+	.date_select {
+		width: 117px;
+	}
+}

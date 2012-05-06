@@ -1,6 +1,7 @@
 header
 	.container
 		- if user_signed_in?
+			= link_to 'Home', home_path, :class => 'fl fb', :style => 'line-height: 30px;'
 			.top_links
 				.icon.fl
 					.update
@@ -9,9 +10,9 @@ header
 				.icon.fl
 					.add
 				.icon.fl
-					.settings
+					= link_to raw("<div class='settings'></div>"), edit_profile_path
 				.fr
-					= link_to 'Sign Out', destroy_user_session_path, :style => 'line-height: 30px; margin-left: 10px;'
+					= link_to 'Sign Out', destroy_user_session_path, :class => 'fb', :style => 'line-height: 30px; margin-left: 10px;'
 			.clearfix
 
 		- else

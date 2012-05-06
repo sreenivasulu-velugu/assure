@@ -19,7 +19,8 @@
 		<%= beautify_params f.label(:password_confirmation), f.password_field(:password_confirmation) %>
 	<% end %>
 
-	<div><%= f.submit "Sign up" %></div>
+	<%= beautify_params '', f.submit('Sign Up', :class => 'btn') %>
+
 <% end %>
 
 <%= render :partial => "devise/shared/links" %>
