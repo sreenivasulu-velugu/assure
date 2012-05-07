@@ -15,10 +15,10 @@ Assure::Application.routes.draw do
   match 'welcome' => 'home#welcome' # just for testing layout
   match '/' => 'home#index', :as => 'home'
 
-  resources :authentications
   resources :users
-  resource :profile, :controller => 'profile' do
-    get '/:uid' => 'profile#public', :as => 'public', :constraints => { :uid => /\d+/ }
+  resources :authentications
+  resources :profile do
+    # get '/:uid' => 'profiles#public', :as => 'public', :constraints => { :uid => /\d+/ }
   end
   
 end

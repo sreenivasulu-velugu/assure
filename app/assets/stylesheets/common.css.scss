@@ -1,8 +1,8 @@
 @import 'mixins';
 
 body {
+	@include default_font;
 	background: url('main_bg.jpg') #f4f4f4 repeat;
-	font-family: "Century Gothic Regular", Verdana, Arial;
 //	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 	font-size: 13px;
 	margin: 0px;
@@ -89,16 +89,23 @@ a {
 	}
 }
 
-.link, .in_place_edit {
+.link, .in_place_edit, .best_in_place {
 	color: $default_link;
 	@include mr5;
 	@include ml5;
 	@include tdn;
 	&:hover {
-		@include tdu;
+		// @include tdu;
 		cursor: pointer;
 	}
 }
+
+//select.in_place_edit, select.best_in_place {
+//	@include tdn;
+//	&:hover {
+//		@include tdn;
+//	}
+//}
 
 .beautify_params {
 	margin: 10px 0px;

@@ -6,9 +6,11 @@
 					.work
 			.content
 				h4 Work
-				
-				= in_place user.profile, user.profile.work, :before => 'I am', :default => 'job profile', :id => 'profile_work'
-				= in_place user.profile, user.profile.work_place, :before => 'at', :default => 'company', :id => 'profile_work_place'
+				div
+					|I am
+					= best_in_place user.profile, :work
+					|at
+					= best_in_place user.profile, :work_place
 
 		li
 			.pic
@@ -16,7 +18,10 @@
 					.birthday
 			.content
 				h4 Birthday
-				= in_place user.profile, @birthday, :after => "making you #{years_diff(@birthday, Time.now) if @birthday} old", :default => 'Specify your birthday', :id => 'profile_birthday'
+				div
+					|I am 
+					= best_in_place user.profile, :birthday
+					="making me #{years_diff(@birthday, Time.now) if @birthday} old"
 
 		li
 			.pic
@@ -24,8 +29,11 @@
 					.relationship
 			.content
 				h4 Relationship
-				= in_place user.profile, user.profile.relationship_status, :before => "I am", :default => 'relationship status', :id => 'profile_relationship_status'
-				/ div You are married to Kendell Yoder
+				div
+					|I am
+					= best_in_place user.profile, :relationship_status, :type => :select, :collection => relationships
+					|and I am married to
+					= best_in_place user.profile, :related_to
 				div
 					| Do you have any kids? (
 					= link_to 'add', '#'
@@ -37,7 +45,9 @@
 					.home
 			.content
 				h4 Living
-				= in_place user.profile, user.profile.address, :default => 'Fill you address', :id => 'profile_address'
+				div
+					= best_in_place user.profile, :address, type: :textarea
+				/ = in_place user.profile, user.profile.address, :default => 'Fill you address', :id => 'profile_address'
 				div
 					| (
 					= link_to 'do you own or rent?', '#'
@@ -49,9 +59,12 @@
 					.education
 			.content
 				h4 Education
-				= in_place user.profile, user.profile.education, :before => 'I am', :default => 'graduate', :id => 'profile_education'
-				= in_place user.profile, user.profile.university, :before => 'from', :default => 'university', :id => 'profile_university'
-
+				div
+					|I am
+					= best_in_place user.profile, :education
+					|from
+					= best_in_place user.profile, :university
+					
 		li
 			.pic
 				.icon

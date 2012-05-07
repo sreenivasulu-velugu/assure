@@ -1,5 +1,7 @@
 class ProfileController < ApplicationController
 	
+	respond_to :html, :json
+
 	def show
 		profile_info_variables
 	end
@@ -17,17 +19,19 @@ class ProfileController < ApplicationController
 	def update
 		@user = current_user
 		user_details = params[:profile].delete(:user)
-		if @user.profile.update_attributes params[:profile] and @user.update_attributes user_details
-			redirect_to home_path
+		@user.profile.update_attributes params[:profile] and @user.update_attributes user_details
+		respond_with @user.profile
+			# redirect_to home_path, :notice => 'Successfully updated profile'
 			# respond_to do |format|
 			# 	format.html {
 			# 		redirect_to home_path
 			# 	}
 			# end
-		end
+		
 	end
 
 	def profile_info_variables
 		@user = params[:uid].presence ? User.find(params[:uid]): current_user
+		@profile = @user.profile
 	end
 end

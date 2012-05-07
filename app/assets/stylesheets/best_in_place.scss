@@ -1,0 +1,20 @@
+@import 'mixins';
+
+.best_in_place {
+	input, textarea, select {
+		border: none;
+		background: $default_link;
+		color: #FFF;
+		@include shadow;
+		@include rad5;
+		@include default_font;
+		font-size: 12px;
+		&:focus {
+			outline-style: none;
+		}
+	}
+}
+
+::-moz-focus-inner {
+	border: 0;
+}

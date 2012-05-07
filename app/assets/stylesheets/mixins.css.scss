@@ -216,8 +216,8 @@ $default_link: #389ad5;
 }
 
 @mixin success {
-	background:#1ab00a;
-	// border:1px solid #127408;
+	background:#64d258;
+	// border:1px solid #1ab00a;
 }
 
 @mixin error {
@@ -228,4 +228,8 @@ $default_link: #389ad5;
 @mixin login_links_height {
 	height:32px;
 	line-height:32px;
+}
+
+@mixin default_font {
+	font-family: "Century Gothic Regular", Verdana, Arial;
 }
