@@ -3,6 +3,7 @@ class User < ActiveRecord::Base
 
   # validations
   validates :first_name, :last_name, :presence => true
+  validates :username, :uniqueness => true
 
 	# relations
   has_many :authentications
