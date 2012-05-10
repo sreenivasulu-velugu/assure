@@ -1,9 +1,9 @@
 @import 'mixins';
 
 body {
-	@include default_font;
+	// @include default_font;
 	background: url('main_bg.jpg') #f4f4f4 repeat;
-//	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 	font-size: 13px;
 	margin: 0px;
 	padding: 0px;
@@ -114,4 +114,21 @@ a {
 
 .login_links {
 	@include login_links_height;
+}
+
+
+.no_margin_strict {
+	margin: 0px !important;
+}
+.no_top_margin {
+	margin-top: 0px !important;
+}
+.no_bottom_margin {
+	margin-bottom: 0px !important;
+}
+.no_left_margin {
+	margin-left: 0px !important;
+}
+.no_right_margin {
+	margin-right: 0px !important;
 }

@@ -47,7 +47,11 @@ module ApplicationHelper
 	end
 
 	def fb_profile
-		return 'http://facebook.com/profile.php?id=' + current_user.authentications.find_by_provider('facebook').uid
+		if current_user.authentications.find_by_provider('facebook')
+			return 'http://facebook.com/profile.php?id=' + current_user.authentications.find_by_provider('facebook').uid
+		else
+			return '#'
+		end
 	end
 
 	def full_name user

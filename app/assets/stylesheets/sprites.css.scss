@@ -2,10 +2,12 @@
 
 @mixin top_links_icon {
 	background-image: url('icons/top_icon.png');
+	@include db;
 }
 
 @mixin icon {
 	background-image: url('icons/surify_sprite.png');
+	@include db;
 }
 @mixin top_links_icon_size {
 	margin: 9px 0px 0px 10px;
