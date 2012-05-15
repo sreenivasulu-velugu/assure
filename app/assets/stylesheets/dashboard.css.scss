@@ -25,10 +25,16 @@ h2.dash_head {
 	@include fb;
 	font-size: 80px;
 	line-height: 65px;
-	letter-spacing: -7px;
+	letter-spacing: 0px;
 }
 .social_links {
 	@include absolute;
 	right: 0px;
 	bottom: 0px;
+}
+
+ul.dashboard_profile {
+	li {
+		min-height: 50px;
+	}
 }

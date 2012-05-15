@@ -1,5 +1,5 @@
 .dashboard_right
-	ul
+	ul.dashboard_profile
 		li
 			.pic
 				.icon
@@ -19,7 +19,7 @@
 			.content
 				h4 Birthday
 				div
-					|I am 
+					|My birthdate is
 					= best_in_place user.profile, :birthday, :nil => 'Fill your birthday'
 					="making me #{years_diff(@birthday, Time.now) if @birthday} old"
 
