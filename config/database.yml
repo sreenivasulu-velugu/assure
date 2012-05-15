@@ -23,3 +23,15 @@ production:
   database: db/production.sqlite3
   pool: 5
   timeout: 5000
+
+heroku-dev:
+  adapter: sqlite3
+  database: db/heroku-dev.sqlite3
+  pool: 5
+  timeout: 5000
+
+heroku-surify:
+  adapter: sqlite3
+  database: db/heroku-surify.sqlite3
+  pool: 5
+  timeout: 5000
