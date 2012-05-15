@@ -3,35 +3,38 @@
 
 	#profile_info.mbm
 		.fl.mlm
-			.score 850
+			.score.fl 850
+
+			.fl.mlm style="width:100px;"
+				h3.no_top_margin
+					.icon.fl
+						.arrow
+					.fl.mls +230
+					.clearfix
+				h3.no_top_margin
+					.icon.fl
+						.line_red
+					.fl.mls -25
+					.clearfix
+
+			.fl.mlm style="width:130px;"
+				h3.no_top_margin
+					.icon.fl
+						.pie
+					.fl.mls +/-10
+					.clearfix
+				h3.no_top_margin
+					.icon.fl
+						.bar
+					.fl.mls #13/12000
+					.clearfix
+			.clearfix
+
 			h2.mts= full_name user
-
-		.fl.mlm style="width:100px;"
-			h3
-				.icon.fl
-					.arrow
-				.fl.mls +230
-				.clearfix
-			h3
-				.icon.fl
-					.line_red
-				.fl.mls -25
-				.clearfix
-
-		.fl.mlm style="width:130px;"
-			h3
-				.icon.fl
-					.pie
-				.fl.mls +/-10
-				.clearfix
-			h3
-				.icon.fl
-					.bar
-				.fl.mls #13/12000
-				.clearfix
 
 		.social_links
 			.icon.fl
+				=link_to '', fb_profile, :class => 'facebook'
 			.icon.fl.mls
 				.linked_in
 			.clearfix

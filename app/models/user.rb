@@ -1,12 +1,14 @@
 class User < ActiveRecord::Base
-  after_create :set_default_associations
-
-  # validations
-  validates :first_name, :last_name, :presence => true
 
 	# relations
   has_many :authentications
   has_one :profile
+  
+  after_create :set_default_associations
+
+  # validations
+  validates :first_name, :last_name, :presence => true
+  validates :username, :uniqueness => true
 
   # Include default devise modules. Others available are:
   # :token_authenticatable, :encryptable, :confirmable, :lockable, :timeoutable and :omniauthable
