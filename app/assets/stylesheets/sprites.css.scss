@@ -33,6 +33,20 @@
 	width: 24px;
 	height: 24px;
 }
+@mixin icon_size_node {
+	width: 10px;
+	height: 10px;
+}
+@mixin icon_size_black_box {
+	width: 60px;
+	height: 22px;
+	line-height: 22px;
+}
+@mixin icon_size_smiley {
+	width: 16px;
+	height: 16px;
+}
+
 @mixin work_bubble_hover {
 	background-position: 0px 0px;
 }
@@ -51,7 +65,15 @@
 @mixin education_bubble_hover {
 	background-position: -229px 0px;
 }
-
+@mixin node_hover {
+	background-position: -83px -96px;
+}
+@mixin facebook_hover {
+	background-position: -32px -112px;
+}
+@mixin linked_in_hover {
+	background-position: -56px -112px;
+}
 .top_links {
 	@include fr;
 }
@@ -130,6 +152,7 @@
 		@include icon_size_top_links;
 		background-position: 0px -160px;
 	}
+
 	.settings
 	{
 		@include icon;
@@ -144,16 +167,26 @@
 		@include icon_size_social;
 		background-position: -32px -136px;
 		&:hover {
-			background-position: -32px -112px;
+			@include facebook_hover;
 		}
+	}
+	.facebook_on {
+		@include icon;
+		@include icon_size_social;
+		@include facebook_hover;
 	}
 	.linked_in {
 		@include icon;
 		@include icon_size_social;
 		background-position: -56px -136px;
 		&:hover {
-			background-position: -56px -112px;
+			@include linked_in_hover;
 		}
+	}
+	.linked_in_on {
+		@include icon;
+		@include icon_size_social;
+		@include linked_in_hover;
 	}
 
 	//statistics
@@ -195,9 +228,48 @@
 		@include profile_pic_size;
 		background-position: -178px -97px;
 	}
+
+	// nodes NODES 9x9 green (83,96) gray (93,96)
+	.node {
+		@include icon;
+		@include icon_size_node;
+		background-position: -93px -96px;
+		&:hover {
+			@include node_hover;
+		}
+	}
+
+	// black container for displaying scores for nodes
+	.black_box {
+		@include icon;
+		@include icon_size_black_box;
+		@include fb;
+		@include dn;
+		background-position: -32px -160px;
+		color: #FFF;
+	}
+
+
+	// SMILEY FACES 16x16 green (32,96) yellow (49,96) red (66,96) 
+	.smiley_green {
+		@include icon;
+		@include icon_size_smiley;
+		background-position: -32px -96px;
+	}
+	.smiley_yellow {
+		@include icon;
+		@include icon_size_smiley;
+		background-position: -49px -96px;
+	}
+	.smiley_red {
+		@include icon;
+		@include icon_size_smiley;
+		background-position: -66px -96px;
+	}
+
 }
 
-li {
+ul.dashboard_profile > li {
 	&:hover {
 		.icon {
 			.work {
@@ -217,6 +289,12 @@ li {
 			}
 			.education {
 				@include education_bubble_hover;
+			}
+			.node {
+				@include node_hover;
+			}
+			.black_box {
+				@include db;
 			}
 		}
 	}

@@ -173,6 +173,36 @@ $default_link: #389ad5;
 @mixin pl20 {
 	padding-left: 20px;
 }
+@mixin m($px) {
+	margin: $px;
+}
+@mixin mt($px) {
+	margin-top: $px;
+}
+@mixin mr($px) {
+	margin-right: $px;
+}
+@mixin mb($px) {
+	margin-bottom: $px;
+}
+@mixin ml($px) {
+	margin-left: $px;
+}
+@mixin p($px) {
+	padding: $px;
+}
+@mixin pt($px) {
+	padding-top: $px;
+}
+@mixin pr($px) {
+	padding-right: $px;
+}
+@mixin pb($px) {
+	padding-bottom: $px;
+}
+@mixin pl($px) {
+	padding-left: $px;
+}
 @mixin tdn {
 	text-decoration: none;
 }

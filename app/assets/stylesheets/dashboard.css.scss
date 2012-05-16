@@ -12,9 +12,16 @@
 	}
 }
 .dashboard_right {
-	width: 300px;
+	width: 310px;
 	@include fl;
 	@include ml20;
+	.outer_container {
+		border-right: 1px solid #F8F8F8;
+		.inner_container {
+			@include pr(30px);
+			border-right: 1px solid #F3F3F3;
+		}
+	}
 }
 h1.dash_head {
 }
@@ -37,6 +44,19 @@ h2.dash_head {
 ul.dashboard_profile {
 	li {
 		min-height: 50px;
+		@include relative;
+		.icon {
+			.node {
+				@include absolute;
+				right: -36px;
+				top: 20px;
+			}
+			.black_box {
+				@include absolute;
+				right: -110px;
+				top: 15px;	
+			}
+		}
 	}
 }
 

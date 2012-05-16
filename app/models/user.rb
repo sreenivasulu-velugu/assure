@@ -8,7 +8,7 @@ class User < ActiveRecord::Base
 
   # validations
   validates :first_name, :last_name, :presence => true
-  validates :username, :uniqueness => true
+  # validates :username, :uniqueness => true
 
   # Include default devise modules. Others available are:
   # :token_authenticatable, :encryptable, :confirmable, :lockable, :timeoutable and :omniauthable

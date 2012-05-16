@@ -74,4 +74,10 @@ module ApplicationHelper
 		return content_before.presence ? (content_before + content_mid + content_after) : (content_mid + content_after)
 	end
 
+	def black_score_box smiley, score = 0
+		text_content =  content_tag 'span', "+#{score}", :class => 'mls fb'
+		smiley_content =  content_tag 'span', '', :class => "#{smiley} fr", :style => 'margin: 3px;'
+
+		content_tag 'div', text_content + smiley_content, :class => 'black_box'
+	end
 end
