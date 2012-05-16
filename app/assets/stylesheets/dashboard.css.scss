@@ -12,13 +12,13 @@
 	}
 }
 .dashboard_right {
-	width: 310px;
+	width: 340px;
 	@include fl;
 	@include ml20;
 	.outer_container {
 		border-right: 1px solid #F8F8F8;
 		.inner_container {
-			@include pr(30px);
+			@include pr(20px);
 			border-right: 1px solid #F3F3F3;
 		}
 	}
@@ -48,12 +48,12 @@ ul.dashboard_profile {
 		.icon {
 			.node {
 				@include absolute;
-				right: -36px;
+				right: -26px;
 				top: 20px;
 			}
 			.black_box {
 				@include absolute;
-				right: -110px;
+				right: -100px;
 				top: 15px;	
 			}
 		}
