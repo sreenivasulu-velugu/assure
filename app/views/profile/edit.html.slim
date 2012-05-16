@@ -8,11 +8,12 @@ div style="width:500px;"
 			= user.input :username
 
 		= f.input :birthday, :as => :date, :prompt => { :day => 'Day', :month => 'Month', :year => 'Year' }, :start_year => 1900, :end_year => 2012, :label => 'Date of Birth', :input_html => { :class => 'date_select' }
+		/ = f.input :birthday, :as => :string, :input_html => {:class => 'hasDatepicker'}
 		= f.input :relationship_status, :as => :select, :collection => relationships, :prompt => 'Select Relationship'
 		= f.input :address
 		= f.input :work, :as => :string
 		= f.input :work_place
 		= f.input :education, :as => :string
 		= f.input :university
-
+		= f.input :cars
 		= f.submit 'Save Changes'

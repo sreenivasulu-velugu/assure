@@ -10,5 +10,6 @@
  *
  *= require_self
  *= require formtastic
+ *= require jquery.ui.all
  *= require_tree .
 */

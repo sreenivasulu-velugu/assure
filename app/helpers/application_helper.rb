@@ -15,7 +15,7 @@ module ApplicationHelper
 	end
 
 	def image_radius size = 5
-		return "-webkit-border-radius: #{size}px;	-moz-border-radius: #{size}px; border-radius: #{size}px;"
+		"-webkit-border-radius: #{size}px; -moz-border-radius: #{size}px; border-radius: #{size}px;"
 	end
 
 	def link_user user = nil, opts = {}
@@ -24,12 +24,13 @@ module ApplicationHelper
 		end
 	end
 
-	def user_image user, width = nil
+	def user_image user, opts = {}
 		if user
-			if user.image
-				image_tag user.image, :style => "#{ image_radius 10 }", :width => width.presence ? "#{width}px" : "100px", :class => 'shadow'
+			get_width = opts[:width].presence ? "#{opts[:width]}px" : "100px"
+			if user.image 
+				image_tag( user.image, opts.merge( :style => "#{ image_radius(0) }", :width => get_width ) ) 
 			else
-				image_tag 'http://placehold.it/93x93', :style => "#{ image_radius 10 }", :width => width.presence ? "#{width}px" : "100px", :class => 'shadow'
+				content_tag('div', '', opts.merge( :style => "#{ image_radius(0) }", :width => get_width, :class => 'default_profile_pic' ) )
 			end
 		end
 	end

@@ -31,6 +31,11 @@ $default_link: #389ad5;
 	-moz-border-radius: 5px;
 	border-radius: 5px;
 }
+@mixin rad($radius) {
+	-webkit-border-radius: $radius;
+	-moz-border-radius: $radius;
+	border-radius: $radius;
+}
 @mixin top_rad5 {
 	-webkit-border-radius: 5px 5px 0px 0px;
 	-moz-border-radius: 5px 5px 0px 0px;
@@ -229,4 +234,9 @@ $default_link: #389ad5;
 
 @mixin default_font {
 	font-family: "Century Gothic Regular", Verdana, Arial;
+}
+
+@mixin profile_pic_size {
+	height: 76px;
+	width: 76px;
 }

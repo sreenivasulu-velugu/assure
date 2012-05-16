@@ -8,9 +8,11 @@
 				h4 Work
 				div
 					|I am
-					= best_in_place user.profile, :work, :nil => 'Fill your wok'
+					= best_in_place user.profile, :work, :nil => '(job title)'
 					|at
-					= best_in_place user.profile, :work_place, :nil => 'Fill your work place'
+					= best_in_place user.profile, :work_place, :nil => '(company name)'
+					|in
+					= best_in_place user.profile, :zip_code_or_city, :nil => '(zip code or city)'
 
 		li
 			.pic
@@ -19,8 +21,8 @@
 			.content
 				h4 Birthday
 				div
-					|My birthdate is
-					= best_in_place user.profile, :birthday, :nil => 'Fill your birthday'
+					|I was born on
+					= best_in_place user.profile, :birthday, :type => :date, :nil => '(year month day)'
 					="making me #{years_diff(@birthday, Time.now) if @birthday} old"
 
 		li
@@ -32,12 +34,12 @@
 				div
 					|I am
 					= best_in_place user.profile, :relationship_status, :type => :select, :collection => relationships, :nil => 'Choose relationship status'
-					|and I am married to
-					= best_in_place user.profile, :related_to, :nil => 'Whom are you married to?'
+					|I am married to
+					= best_in_place user.profile, :related_to, :nil => "(persons name)"
 				div
 					|I have
-					= best_in_place user.profile, :no_of_kids, :nil => 'Fill number kids you have'
-					|kids
+					= best_in_place user.profile, :no_of_kids, :nil => '(No, One, Two...Eight)'
+					|children
 
 
 		li
@@ -47,13 +49,12 @@
 			.content
 				h4 Living
 				div
-					= best_in_place user.profile, :address, :nil => 'Fill your address', type: :textarea
-				/ = in_place user.profile, user.profile.address, :default => 'Fill you address', :id => 'profile_address'
-				div
-					| (
-					= link_to 'do you own or rent?', '#'
-					| )
-
+					|I
+					= best_in_place user.profile, :house_type, :nil => '(own/rent)', type: :select, :collection => house_types
+					|a
+					= best_in_place user.profile, :address, :nil => '(condo/house/apartment)'
+					|in
+					= best_in_place user.profile, :house_zip_code, :nil => '(zipcode)'
 		li
 			.pic
 				.icon
@@ -62,10 +63,13 @@
 				h4 Education
 				div
 					|I am
-					= best_in_place user.profile, :education, :nil => 'Fill your education'
+					= best_in_place user.profile, :education, :nil => '(graduate/underclassmen)'
 					|from
-					= best_in_place user.profile, :university, :nil => 'Fill your education'
-					
+					= best_in_place user.profile, :university, :nil => '(school)'
+					|with a
+					= best_in_place user.profile, :degree, :nil => '(BS/BA degree)'
+					|in
+					= best_in_place user.profile, :area_of_study, :nil => '(area of study)'
 		li
 			.pic
 				.icon
@@ -73,6 +77,12 @@
 			.content
 				h4 Cars
 				div
-					| I own
-					= best_in_place user.profile, :cars, :nil => 'Fill you car details'
+					| I
+					= best_in_place user.profile, :car_type, :nil => '(own/rent/lease)', type: :select, :collection => car_types
+					|a
+					= best_in_place user.profile, :car_year, :nil => '(year)'
+					|,
+					= best_in_place user.profile, :car_make, :nil => '(make)'
+					= best_in_place user.profile, :car_model, :nil => '(model)'
+
 						

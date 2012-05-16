@@ -1,7 +1,7 @@
 .dashboard_left
-	.fl= user_image user
+	.profile_pic.fl.icon= user_image user, :width => 76
 
-	#profile_info.mbm
+	#profile_info.mbm.fl
 		.fl.mlm
 			.score.fl 850
 
@@ -39,6 +39,7 @@
 				.linked_in
 			.clearfix
 		.clearfix
+	.clearfix
 
-	.component
-		= image_tag 'graph.png'
+	/ .component
+	/ 	= image_tag 'graph.png'

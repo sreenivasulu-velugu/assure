@@ -6,7 +6,7 @@
 }
 
 @mixin icon {
-	background-image: url('icons/surify_sprite.png');
+	background-image: url('icons/surify_sprite_new.png');
 	@include db;
 }
 @mixin top_links_icon_size {
@@ -58,6 +58,9 @@
 
 .icon {
 
+	a {
+		margin: 0px;
+	}
 	// bubble icon
 	.work {
 		@include icon;
@@ -186,7 +189,12 @@
 		background-position: -153px -136px;
 	}
 
-	// STATISTICS 24x24pie (79,112)bar (103,112)line (128,112)arrow (153,112)line red (128,136)arrow red (153,136)
+	// profile pic 178,97
+	.default_profile_pic {
+		@include icon;
+		@include profile_pic_size;
+		background-position: -178px -97px;
+	}
 }
 
 li {

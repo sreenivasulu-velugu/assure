@@ -2,6 +2,7 @@
 
 .dashboard_left {
 	@include fl;
+	width: 500px;
 	#profile_info {
 		@include relative;
 		h3 {
@@ -25,7 +26,7 @@ h2.dash_head {
 	@include fb;
 	font-size: 80px;
 	line-height: 65px;
-	letter-spacing: 0px;
+	letter-spacing: -4px;
 }
 .social_links {
 	@include absolute;
@@ -37,4 +38,11 @@ ul.dashboard_profile {
 	li {
 		min-height: 50px;
 	}
+}
+
+.profile_pic {
+	@include profile_pic_size;
+	overflow: hidden;
+	@include rad (10px);
+	@include shadow;
 }
