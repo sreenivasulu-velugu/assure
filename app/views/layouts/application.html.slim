@@ -1,4 +1,4 @@
-doctype
+doctype html
 html
 	head
 		meta charset="utf-8"
@@ -10,8 +10,12 @@ html
 		= stylesheet_link_tag    "application", :media => "all"
 		= javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"
 		= javascript_include_tag "application"
-		= javascript_include_tag "http://use.typekit.com/nvm0jyb.js"
+		= javascript_include_tag "http://use.typekit.com/kci1iwt.js"
 		= csrf_meta_tags
+
+		script type="text/javascript"
+			| try{Typekit.load();}catch(e){}
+
 		= yield (:head)
 	body
 		#wrapper
@@ -20,6 +24,3 @@ html
 			.container.container_padding
 				.mtl
 					= yield
-
-	javascript:
-		try{Typekit.load();}catch(e){}

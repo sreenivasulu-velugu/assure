@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120510221123) do
+ActiveRecord::Schema.define(:version => 20120516143441) do
 
   create_table "authentications", :force => true do |t|
     t.integer  "user_id"
@@ -36,6 +36,15 @@ ActiveRecord::Schema.define(:version => 20120510221123) do
     t.string   "university"
     t.string   "related_to"
     t.integer  "no_of_kids"
+    t.string   "zip_code_or_city"
+    t.string   "house_type"
+    t.string   "degree"
+    t.string   "area_of_study"
+    t.string   "car_type"
+    t.integer  "car_year"
+    t.string   "car_make"
+    t.string   "car_model"
+    t.string   "house_zip_code"
   end
 
   add_index "profiles", ["user_id"], :name => "index_profiles_on_user_id"

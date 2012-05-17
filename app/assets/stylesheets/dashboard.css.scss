@@ -2,6 +2,7 @@
 
 .dashboard_left {
 	@include fl;
+	width: 500px;
 	#profile_info {
 		@include relative;
 		h3 {
@@ -11,9 +12,16 @@
 	}
 }
 .dashboard_right {
-	width: 300px;
+	width: 340px;
 	@include fl;
 	@include ml20;
+	.outer_container {
+		border-right: 1px solid #F8F8F8;
+		.inner_container {
+			@include pr(20px);
+			border-right: 1px solid #F3F3F3;
+		}
+	}
 }
 h1.dash_head {
 }
@@ -25,10 +33,36 @@ h2.dash_head {
 	@include fb;
 	font-size: 80px;
 	line-height: 65px;
-	letter-spacing: -7px;
+	letter-spacing: -4px;
 }
 .social_links {
 	@include absolute;
 	right: 0px;
 	bottom: 0px;
+}
+
+ul.dashboard_profile {
+	li {
+		min-height: 50px;
+		@include relative;
+		.icon {
+			.node {
+				@include absolute;
+				right: -26px;
+				top: 20px;
+			}
+			.black_box {
+				@include absolute;
+				right: -100px;
+				top: 15px;	
+			}
+		}
+	}
+}
+
+.profile_pic {
+	@include profile_pic_size;
+	overflow: hidden;
+	@include rad (10px);
+	@include shadow;
 }

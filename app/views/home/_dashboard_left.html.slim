@@ -1,7 +1,7 @@
 .dashboard_left
-	.fl= user_image user
+	.profile_pic.fl.icon= user_image user, :width => 76
 
-	#profile_info.mbm
+	#profile_info.mbm.fl
 		.fl.mlm
 			.score.fl 850
 
@@ -9,24 +9,24 @@
 				h3.no_top_margin
 					.icon.fl
 						.arrow
-					.fl.mls +230
+					.fl.mls.fb +230
 					.clearfix
 				h3.no_top_margin
 					.icon.fl
 						.line_red
-					.fl.mls -25
+					.fl.mls.fb -25
 					.clearfix
 
 			.fl.mlm style="width:130px;"
 				h3.no_top_margin
 					.icon.fl
 						.pie
-					.fl.mls +/-10
+					.fl.mls.fb +/-10
 					.clearfix
 				h3.no_top_margin
 					.icon.fl
 						.bar
-					.fl.mls #13/12000
+					.fl.mls.fb #13/12000
 					.clearfix
 			.clearfix
 
@@ -34,11 +34,18 @@
 
 		.social_links
 			.icon.fl
-				=link_to '', fb_profile, :class => 'facebook'
+				- if @authentications.count == 1 and @authentications[0].provider == 'facebook'
+					=link_to '', fb_profile, :class => 'facebook_on'
+				- else
+					=link_to '', fb_profile, :class => 'facebook'
 			.icon.fl.mls
-				.linked_in
+				- if @authentications.count == 1 and @authentications[0].provider == 'linkedin'
+					.linked_in_on
+				- else
+					.linked_in
 			.clearfix
 		.clearfix
+	.clearfix
 
-	.component
-		= image_tag 'graph.png'
+	/ .component
+	/ 	= image_tag 'graph.png'

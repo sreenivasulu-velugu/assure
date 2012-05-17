@@ -6,8 +6,7 @@ h2.dash_head here is your profile information
 
 = render :partial => 'dashboard_left', :locals => { :user => user }
 = render :partial => 'dashboard_right', :locals => { :user => user }
+= render :partial => 'nodes', :locals => { :user => user }
 
 
 .clearfix
-
-= request.host
