@@ -1,0 +1,19 @@
+- profile = user.profile
+
+li#birthday_info
+	.icon
+		.node
+		= black_score_box 'smiley_green', profile.birthday_score
+	.pic
+		.icon
+			- if profile.birthday.present?
+				.birthday_on
+			- else
+				.birthday
+
+	.content
+		h4 Birthday
+		div
+			|I was born on
+			= best_in_place profile, :birthday, :type => :date, :nil => '(year month day)'
+			="making me #{years_diff(@birthday, Time.now) if @birthday} old"

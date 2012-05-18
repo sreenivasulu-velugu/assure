@@ -1,0 +1,22 @@
+- profile = user.profile
+
+li#car_info
+	.icon
+		.node
+		= black_score_box 'smiley_green', profile.car_score
+	.pic
+		.icon
+			- if profile.car_type.present? || profile.car_year.present? || profile.car_make.present? || profile.car_model.present?
+				.car_on
+			- else
+				.car
+	.content
+		h4 Cars
+		div
+			| I
+			= best_in_place profile, :car_type, :nil => '(own/rent/lease)', type: :select, :collection => car_types
+			|a
+			= best_in_place profile, :car_year, :nil => '(year)'
+			|,
+			= best_in_place profile, :car_make, :nil => '(make)'
+			= best_in_place profile, :car_model, :nil => '(model)'

@@ -1,0 +1,21 @@
+- profile = user.profile
+
+li#living_info
+	.icon
+		.node
+		= black_score_box 'smiley_green', profile.living_score
+	.pic
+		.icon
+			- if profile.house_type.present? || profile.address.present? || profile.house_zip_code.present?
+				.home_on
+			- else
+				.home
+	.content
+		h4 Living
+		div
+			|I
+			= best_in_place profile, :house_type, :nil => '(own/rent)', type: :select, :collection => house_types
+			|a
+			= best_in_place profile, :address, :nil => '(condo/house/apartment)'
+			|in
+			= best_in_place profile, :house_zip_code, :nil => '(zipcode)'

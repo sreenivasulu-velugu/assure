@@ -1,0 +1,22 @@
+- profile = user.profile
+
+li#relationship_info
+	.icon
+		.node
+		= black_score_box 'smiley_green', profile.relationship_score
+	.pic
+		.icon
+			- if profile.relationship_status.present? || profile.related_to.present? || profile.no_of_kids.present?
+				.relationship_on
+			- else
+				.relationship
+	.content
+		h4 Relationship
+		div
+			|I am
+			= best_in_place profile, :relationship_status, :type => :select, :collection => relationships, :nil => 'Choose relationship status'
+			|I am married to
+			= best_in_place profile, :related_to, :nil => "(persons name)"
+			|I have
+			= best_in_place profile, :no_of_kids, :nil => '(No, One, Two...Eight)'
+			|children

@@ -92,6 +92,12 @@
 			@include work_bubble_hover;
 		}
 	}
+	.work_on {
+		@include icon;
+		@include icon_size_bubble;
+		@include work_bubble_hover;
+	}
+
 	.birthday {
 		@include icon;
 		@include icon_size_bubble;
@@ -100,6 +106,12 @@
 			@include birthday_bubble_hover;
 		}
 	}
+	.birthday_on {
+		@include icon;
+		@include icon_size_bubble;
+		@include birthday_bubble_hover;
+	}
+
 	.relationship {
 		@include icon;
 		@include icon_size_bubble;
@@ -108,6 +120,12 @@
 			@include relationship_bubble_hover;
 		}
 	}
+	.relationship_on {
+		@include icon;
+		@include icon_size_bubble;
+		@include relationship_bubble_hover;
+	}
+
 	.car {
 		@include icon;
 		@include icon_size_bubble;
@@ -116,6 +134,12 @@
 			@include car_bubble_hover;
 		}
 	}
+	.car_on {
+		@include icon;
+		@include icon_size_bubble;
+		@include car_bubble_hover;
+	}
+
 	.home {
 		@include icon;
 		@include icon_size_bubble;
@@ -124,6 +148,12 @@
 			@include home_bubble_hover;
 		}
 	}
+	.home_on {
+		@include icon;
+		@include icon_size_bubble;
+		@include home_bubble_hover;
+	}
+
 	.education {
 		@include icon;
 		@include icon_size_bubble;
@@ -131,6 +161,11 @@
 		&:hover {
 			@include education_bubble_hover;
 		}
+	}
+	.education_on	{
+		@include icon;
+		@include icon_size_bubble;
+		@include education_bubble_hover;
 	}
 
 	// top_links icon

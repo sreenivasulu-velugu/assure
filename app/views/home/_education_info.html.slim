@@ -1,0 +1,23 @@
+- profile = user.profile
+
+li#education_info
+	.icon
+		.node
+		= black_score_box 'smiley_green', profile.education_score
+	.pic
+		.icon
+			- if profile.education.present? || profile.university.present? || profile.degree.present? || profile.area_of_study.present?
+				.education_on
+			- else
+				.education
+	.content
+		h4 Education
+		div
+			|I am
+			= best_in_place profile, :education, :nil => '(graduate/underclassmen)'
+			|from
+			= best_in_place profile, :university, :nil => '(school) '
+			|with a
+			= best_in_place profile, :degree, :nil => '(BS/BA degree)'
+			|in
+			= best_in_place profile, :area_of_study, :nil => '(area of study)'
