@@ -8,6 +8,11 @@ class HomeController < ApplicationController
 			@birthday = @user.profile.birthday.strftime("%B %e, %Y")
 		end
 		@authentications = current_user.authentications if current_user
+
+		respond_to do |format|
+			format.js {}
+			format.html { render :index }
+		end 
 	end
 
 	def welcome

@@ -3,7 +3,7 @@
 
 	#profile_info.mbm.fl
 		.fl.mlm
-			.score.fl= user.profile.total_score
+			= render :partial => 'score', :locals => { :user => user }
 
 			.fl.mlm style="width:100px;"
 				h3.no_top_margin

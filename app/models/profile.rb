@@ -7,9 +7,9 @@ class Profile < ActiveRecord::Base
 	accepts_nested_attributes_for :user
 
 	def score
-		max_score = 997
-		no_of_items = 18
-		@item_score = max_score/no_of_items
+		@max_score = 997
+		@no_of_items = 18
+		@item_score = @max_score/@no_of_items
 	end
 
 	def work_score
@@ -24,7 +24,7 @@ class Profile < ActiveRecord::Base
 	def birthday_score
 		score
 		partial_score = 0
-		(partial_score += @item_score) if self.work.present?
+		(partial_score += @item_score) if self.birthday.present?
 		return partial_score
 
 	end
@@ -72,4 +72,16 @@ class Profile < ActiveRecord::Base
 	def total_score
 		self.work_score + self.birthday_score + self.relationship_score + self.living_score + self.education_score + self.car_score
 	end
+
+	def profile_completion
+		total_columns = Profile.columns.count - 4
+		completed = 0
+		Profile.columns.each do |c|
+			(completed += 1) if self.try(c.name.to_sym).present?
+		end
+		filled_columns = completed - 4 # removing 4 columns because not filled by user
+
+		return (filled_columns.to_f/total_columns.to_f)*100
+	end
+
 end

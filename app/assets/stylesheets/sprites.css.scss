@@ -46,7 +46,10 @@
 	width: 16px;
 	height: 16px;
 }
-
+@mixin icon_size_progress_bar {
+	width: 290px;
+	height: 48px;
+}
 @mixin work_bubble_hover {
 	background-position: 0px 0px;
 }
@@ -302,6 +305,17 @@
 		background-position: -66px -96px;
 	}
 
+	// PROGRESS BAR 290x48 empty bar (0,228) colored (0,276)
+	.progress_empty {
+		@include icon;
+		@include icon_size_progress_bar;
+		background-position: 0px -227px;
+	}
+	.progress_complete {
+		@include icon;
+		height: 46px;
+		background-position: 0px -275px;
+	}
 }
 
 ul.dashboard_profile > li {

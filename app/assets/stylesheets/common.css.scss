@@ -132,3 +132,9 @@ a {
 .no_right_margin {
 	margin-right: 0px !important;
 }
+.relative {
+	@include relative;
+}
+.absolute {
+	@include absolute;
+}

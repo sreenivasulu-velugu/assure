@@ -1,1 +1,2 @@
-alert(info_id+'info reloaded');
+$('.score').replaceWith("<%= escape_javascript( render :partial => 'score', :locals => { :user => @user } ) %>");
+$('#profile_progress').replaceWith("<%= escape_javascript( render :partial => 'profile_completion', :locals => { :user => @user } ) %>");

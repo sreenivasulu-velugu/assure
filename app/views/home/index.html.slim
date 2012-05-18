@@ -1,19 +1,22 @@
 - user = @user
 
-/ h1.dash_head your Dashboard
-/ h2.dash_head here is your profile information
-
-div.mbl
-	.main_logo.fl
-	.fl
-		.fl
-			h1.mls SUREIFY
-			h3.mls Finally a score that matters.
-		.clearfix
-	.clearfix
-
+= render :partial => 'dashboard_header', :locals => { :user => user } 
 = render :partial => 'dashboard_left', :locals => { :user => user }
 = render :partial => 'dashboard_right', :locals => { :user => user }
 = render :partial => 'nodes', :locals => { :user => user }
-
 .clearfix
+
+javascript:
+	$('.dashboard_profile li input, .dashboard_profile li select').live('blur',function(e){
+		var info_type = $(this).closest('li').attr('id');
+		var user = "#{user}"
+		$.ajax({
+			type: 'GET',
+			url: '/',
+			cache: false,
+			data: 'user='+user,
+			success: function(response) {
+				// alert('sent request');
+			}
+		});
+	});
