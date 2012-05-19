@@ -3,7 +3,7 @@
 li#work_info
 	.icon
 		.node
-		= black_score_box 'smiley_green', profile.work_score
+		= black_score_box "smiley_#{profile.work_mood}", profile.work_score
 	.pic
 		.icon
 			- if profile.work.present? || profile.work_place.present? || profile.zip_code_or_city.present?

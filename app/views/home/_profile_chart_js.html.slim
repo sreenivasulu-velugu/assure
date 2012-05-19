@@ -1,0 +1,16 @@
+- profile = user.profile
+
+javascript:
+	window.graphData = [
+		['Task', 'Profile score'],	
+		['Work', #{profile.work_score}], 
+		['Birthday', #{profile.birthday_score}], 
+		['Relationship', #{profile.relationship_score}], 
+		['Living', #{profile.living_score}], 
+		['Education', #{profile.education_score}], 
+		['Car', #{profile.car_score}]
+	];
+	graphData = window.graphData
+
+	google.load("visualization", "1", {packages:["corechart"]});
+	google.setOnLoadCallback(profileChart);

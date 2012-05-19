@@ -3,7 +3,7 @@
 li#relationship_info
 	.icon
 		.node
-		= black_score_box 'smiley_green', profile.relationship_score
+		= black_score_box "smiley_#{profile.relationship_mood}", profile.relationship_score
 	.pic
 		.icon
 			- if profile.relationship_status.present? || profile.related_to.present? || profile.no_of_kids.present?

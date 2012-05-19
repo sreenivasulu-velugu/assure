@@ -3,7 +3,7 @@
 li#education_info
 	.icon
 		.node
-		= black_score_box 'smiley_green', profile.education_score
+		= black_score_box "smiley_#{profile.education_mood}", profile.education_score
 	.pic
 		.icon
 			- if profile.education.present? || profile.university.present? || profile.degree.present? || profile.area_of_study.present?

@@ -1,2 +1,20 @@
+// window.graphData = [
+//   ['Task', 'Profile score'],  
+//   ['Work', 2], 
+//   ['Birthday', 2], 
+//   ['Relationship', 2], 
+//   ['Living', 2], 
+//   ['Education', 2], 
+//   ['Car', 2]
+// ];
+
+
+// graphData = window.graphData
+// alert(graphData);
+
+
 $('.score').replaceWith("<%= escape_javascript( render :partial => 'score', :locals => { :user => @user } ) %>");
 $('#profile_progress').replaceWith("<%= escape_javascript( render :partial => 'profile_completion', :locals => { :user => @user } ) %>");
+// $('#profile_chart').replaceWith("<%= escape_javascript( render :partial => 'profile_chart_js', :locals => { :user => @user } ) %>");
+// google.load("visualization", "1", {packages:["corechart"]});
+// google.setOnLoadCallback(profileChart);

@@ -47,5 +47,6 @@
 		.clearfix
 	.clearfix
 
-	/ .component
-	/ 	= image_tag 'graph.png'
+	.component
+		#profile_chart
+			= render :partial => 'profile_chart_js', :locals => { :user => user }

@@ -84,4 +84,92 @@ class Profile < ActiveRecord::Base
 		return (filled_columns.to_f/total_columns.to_f)*100
 	end
 
+	def work_mood
+		filled = 0
+		(filled += 1) if self.work.present?
+		(filled += 1) if self.work_place.present?
+		(filled += 1) if self.zip_code_or_city.present?
+		
+		if filled == 0
+			return 'red'
+		elsif filled == 1 or filled == 2
+			return 'yellow'
+		elsif filled == 3
+			return 'green'
+		end
+	end
+
+	def birthday_mood
+		filled = 0
+		(filled += 1) if self.birthday.present?
+		
+		if filled == 0
+			return 'red'
+		elsif filled == 1
+			return 'green'
+		end
+	end
+
+	def relationship_mood
+		filled = 0
+		(filled += 1) if self.relationship_status.present?
+		(filled += 1) if self.related_to.present?
+		(filled += 1) if self.no_of_kids.present?
+
+		if filled == 0
+			return 'red'
+		elsif filled == 1 or filled == 2
+			return 'yellow'
+		elsif filled == 3
+			return 'green'
+		end
+	end
+
+	def living_mood
+		filled = 0
+		(filled += 1) if self.house_type.present?
+		(filled += 1) if self.address.present?
+		(filled += 1) if self.house_zip_code.present?
+
+		if filled == 0
+			return 'red'
+		elsif filled == 1 or filled == 2
+			return 'yellow'
+		elsif filled == 3
+			return 'green'
+		end
+	end
+
+	def education_mood
+		filled = 0
+		(filled += 1) if self.education.present?
+		(filled += 1) if self.university.present?
+		(filled += 1) if self.degree.present?
+		(filled += 1) if self.area_of_study.present?
+
+		if filled == 0
+			return 'red'
+		elsif filled == 1 or filled == 2
+			return 'yellow'
+		elsif filled == 3 or filled == 4
+			return 'green'
+		end
+	end
+
+	def car_mood
+		filled = 0
+		(filled += 1) if self.car_type.present?
+		(filled += 1) if self.car_year.present?
+		(filled += 1) if self.car_make.present?
+		(filled += 1) if self.car_model.present?
+
+		if filled == 0
+			return 'red'
+		elsif filled == 1 or filled == 2
+			return 'yellow'
+		elsif filled == 3 or filled == 4
+			return 'green'
+		end
+	end
+	
 end

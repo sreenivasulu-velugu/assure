@@ -6,6 +6,8 @@
 = render :partial => 'nodes', :locals => { :user => user }
 .clearfix
 
+/ = render :partial => 'profile_chart_js', :locals => { :user => user }
+
 javascript:
 	$('.dashboard_profile li input, .dashboard_profile li select').live('blur',function(e){
 		var info_type = $(this).closest('li').attr('id');
@@ -14,7 +16,6 @@ javascript:
 			type: 'GET',
 			url: '/',
 			cache: false,
-			data: 'user='+user,
 			success: function(response) {
 				// alert('sent request');
 			}

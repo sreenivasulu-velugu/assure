@@ -3,7 +3,7 @@
 li#birthday_info
 	.icon
 		.node
-		= black_score_box 'smiley_green', profile.birthday_score
+		= black_score_box "smiley_#{profile.birthday_mood}", profile.birthday_score
 	.pic
 		.icon
 			- if profile.birthday.present?
