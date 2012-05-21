@@ -9,9 +9,20 @@
 / = render :partial => 'profile_chart_js', :locals => { :user => user }
 
 javascript:
+	
 	$('.dashboard_profile li input, .dashboard_profile li select').live('blur',function(e){
-		var info_type = $(this).closest('li').attr('id');
-		var user = "#{user}"
+		send_request();
+	});
+
+	$('.dashboard_profile li input, .dashboard_profile li select').live('keydown',function(e){
+		if (e.which == 9 || e.which == 13) {
+			send_request();
+		}
+	});
+
+	function send_request(){
+		// var info_type = $(this).closest('li').attr('id');
+		// var user = "#{user}"
 		$.ajax({
 			type: 'GET',
 			url: '/',
@@ -20,4 +31,4 @@ javascript:
 				// alert('sent request');
 			}
 		});
-	});
+	}

@@ -1,9 +1,7 @@
 - profile = user.profile
 
 li#work_info
-	.icon
-		.node
-		= black_score_box "smiley_#{profile.work_mood}", profile.work_score
+	= render :partial => 'work_mood', :locals => { :profile => profile }
 	.pic
 		.icon
 			- if profile.work.present? || profile.work_place.present? || profile.zip_code_or_city.present?
@@ -19,5 +17,3 @@ li#work_info
 			= best_in_place profile, :work_place, :nil => '(company name)'
 			|in
 			= best_in_place profile, :zip_code_or_city, :nil => '(zip code or city'
-
-

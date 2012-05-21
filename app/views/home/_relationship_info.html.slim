@@ -1,9 +1,8 @@
 - profile = user.profile
 
 li#relationship_info
-	.icon
-		.node
-		= black_score_box "smiley_#{profile.relationship_mood}", profile.relationship_score
+	= render :partial => 'relationship_mood', :locals => { :profile => profile }
+	
 	.pic
 		.icon
 			- if profile.relationship_status.present? || profile.related_to.present? || profile.no_of_kids.present?

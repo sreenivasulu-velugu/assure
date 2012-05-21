@@ -1,9 +1,8 @@
 - profile = user.profile
 
 li#birthday_info
-	.icon
-		.node
-		= black_score_box "smiley_#{profile.birthday_mood}", profile.birthday_score
+	= render :partial => 'birthday_mood', :locals => { :profile => profile }
+	
 	.pic
 		.icon
 			- if profile.birthday.present?

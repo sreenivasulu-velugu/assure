@@ -1,20 +1,27 @@
-// window.graphData = [
-//   ['Task', 'Profile score'],  
-//   ['Work', 2], 
-//   ['Birthday', 2], 
-//   ['Relationship', 2], 
-//   ['Living', 2], 
-//   ['Education', 2], 
-//   ['Car', 2]
-// ];
+window.graphData = [
+  ['Task', 'Profile score'],  
+  ['Work', <%= @user.profile.work_score %>], 
+  ['Birthday', <%= @user.profile.birthday_score %>], 
+  ['Relationship', <%= @user.profile.relationship_score %>], 
+  ['Living', <%= @user.profile.living_score %>], 
+  ['Education', <%= @user.profile.education_score %>], 
+  ['Car', <%= @user.profile.car_score %>]
+];
 
+// refreshing main score
+$('#main_score').replaceWith("<%= escape_javascript( render :partial => 'score', :locals => { :user => @user } ) %>");
 
-// graphData = window.graphData
-// alert(graphData);
-
-
-$('.score').replaceWith("<%= escape_javascript( render :partial => 'score', :locals => { :user => @user } ) %>");
+// refreshing progress bar
 $('#profile_progress').replaceWith("<%= escape_javascript( render :partial => 'profile_completion', :locals => { :user => @user } ) %>");
-// $('#profile_chart').replaceWith("<%= escape_javascript( render :partial => 'profile_chart_js', :locals => { :user => @user } ) %>");
-// google.load("visualization", "1", {packages:["corechart"]});
-// google.setOnLoadCallback(profileChart);
+
+// refreshing chart
+profileChart();
+
+// refreshing the node scores
+$('#work_mood').replaceWith("<%= escape_javascript( render :partial => 'work_mood', :locals => { :profile => @user.profile } ) %>");
+$('#birthday_mood').replaceWith("<%= escape_javascript( render :partial => 'birthday_mood', :locals => { :profile => @user.profile } ) %>");
+$('#relationship_mood').replaceWith("<%= escape_javascript( render :partial => 'relationship_mood', :locals => { :profile => @user.profile } ) %>");
+$('#living_mood').replaceWith("<%= escape_javascript( render :partial => 'living_mood', :locals => { :profile => @user.profile } ) %>");
+$('#education_mood').replaceWith("<%= escape_javascript( render :partial => 'education_mood', :locals => { :profile => @user.profile } ) %>");
+$('#car_mood').replaceWith("<%= escape_javascript( render :partial => 'car_mood', :locals => { :profile => @user.profile } ) %>");
+

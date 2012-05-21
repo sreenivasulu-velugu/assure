@@ -1,9 +1,8 @@
 - profile = user.profile
 
 li#living_info
-	.icon
-		.node
-		= black_score_box "smiley_#{profile.living_mood}", profile.living_score
+	= render :partial => 'living_mood', :locals => { :profile => profile }
+	
 	.pic
 		.icon
 			- if profile.house_type.present? || profile.address.present? || profile.house_zip_code.present?

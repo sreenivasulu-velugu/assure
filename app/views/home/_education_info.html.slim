@@ -1,9 +1,8 @@
 - profile = user.profile
 
 li#education_info
-	.icon
-		.node
-		= black_score_box "smiley_#{profile.education_mood}", profile.education_score
+	= render :partial => 'education_mood', :locals => { :profile => profile }
+	
 	.pic
 		.icon
 			- if profile.education.present? || profile.university.present? || profile.degree.present? || profile.area_of_study.present?

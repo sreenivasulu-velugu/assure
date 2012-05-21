@@ -1,9 +1,8 @@
 - profile = user.profile
 
 li#car_info
-	.icon
-		.node
-		= black_score_box "smiley_#{profile.car_mood}", profile.car_score
+	= render :partial => 'car_mood', :locals => { :profile => profile }
+	
 	.pic
 		.icon
 			- if profile.car_type.present? || profile.car_year.present? || profile.car_make.present? || profile.car_model.present?
