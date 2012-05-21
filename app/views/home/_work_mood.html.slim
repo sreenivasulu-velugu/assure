@@ -1,3 +1,10 @@
-.icon#work_mood
-	.node
-	= black_score_box "smiley_#{profile.work_mood}", profile.work_score
+#work_mood
+	.icon
+		.node
+		= black_score_box "smiley_#{profile.work_mood}", profile.work_score
+	.pic
+		.icon
+			- if profile.work.present? || profile.work_place.present? || profile.zip_code_or_city.present?
+				.work_on
+			- else
+				.work

@@ -2,12 +2,6 @@
 
 li#work_info
 	= render :partial => 'work_mood', :locals => { :profile => profile }
-	.pic
-		.icon
-			- if profile.work.present? || profile.work_place.present? || profile.zip_code_or_city.present?
-				.work_on
-			- else
-				.work
 	.content
 		h4 Work
 		div

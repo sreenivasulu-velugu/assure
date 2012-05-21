@@ -2,13 +2,6 @@
 
 li#relationship_info
 	= render :partial => 'relationship_mood', :locals => { :profile => profile }
-	
-	.pic
-		.icon
-			- if profile.relationship_status.present? || profile.related_to.present? || profile.no_of_kids.present?
-				.relationship_on
-			- else
-				.relationship
 	.content
 		h4 Relationship
 		div

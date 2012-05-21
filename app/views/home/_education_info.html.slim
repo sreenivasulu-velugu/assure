@@ -2,13 +2,6 @@
 
 li#education_info
 	= render :partial => 'education_mood', :locals => { :profile => profile }
-	
-	.pic
-		.icon
-			- if profile.education.present? || profile.university.present? || profile.degree.present? || profile.area_of_study.present?
-				.education_on
-			- else
-				.education
 	.content
 		h4 Education
 		div

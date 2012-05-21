@@ -1,3 +1,10 @@
-.icon#living_mood
-	.node
-	= black_score_box "smiley_#{profile.living_mood}", profile.living_score
+#living_mood
+	.icon
+		.node
+		= black_score_box "smiley_#{profile.living_mood}", profile.living_score
+	.pic
+		.icon
+			- if profile.house_type.present? || profile.address.present? || profile.house_zip_code.present?
+				.home_on
+			- else
+				.home

@@ -2,14 +2,6 @@
 
 li#birthday_info
 	= render :partial => 'birthday_mood', :locals => { :profile => profile }
-	
-	.pic
-		.icon
-			- if profile.birthday.present?
-				.birthday_on
-			- else
-				.birthday
-
 	.content
 		h4 Birthday
 		div

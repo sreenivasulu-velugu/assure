@@ -1,3 +1,11 @@
-.icon#car_mood
-	.node
-	= black_score_box "smiley_#{profile.car_mood}", profile.car_score
+#car_mood
+	.icon
+		.node
+		= black_score_box "smiley_#{profile.car_mood}", profile.car_score
+
+	.pic
+		.icon
+			- if profile.car_type.present? || profile.car_year.present? || profile.car_make.present? || profile.car_model.present?
+				.car_on
+			- else
+				.car

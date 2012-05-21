@@ -1,3 +1,11 @@
-.icon#education_mood
-	.node
-	= black_score_box "smiley_#{profile.education_mood}", profile.education_score
+#education_mood
+	.icon
+		.node
+		= black_score_box "smiley_#{profile.education_mood}", profile.education_score
+
+	.pic
+		.icon
+			- if profile.education.present? || profile.university.present? || profile.degree.present? || profile.area_of_study.present?
+				.education_on
+			- else
+				.education

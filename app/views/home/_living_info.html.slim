@@ -2,13 +2,6 @@
 
 li#living_info
 	= render :partial => 'living_mood', :locals => { :profile => profile }
-	
-	.pic
-		.icon
-			- if profile.house_type.present? || profile.address.present? || profile.house_zip_code.present?
-				.home_on
-			- else
-				.home
 	.content
 		h4 Living
 		div
